@@ -1,0 +1,18 @@
+:host {
+  display: flex;
+  width: 100%;
+}
+
+.gg-text-input {
+  background-color: #1f2c3d;
+  border-color: #2a3b51;
+  border-radius: 16px;
+  height: 128px;
+  width: 100%;
+  color: #fff;
+  font-family: "Tilt Neon", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  padding: 8px;
+  resize: none;
+}
