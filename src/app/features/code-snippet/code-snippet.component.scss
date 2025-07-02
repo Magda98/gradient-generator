@@ -1,0 +1,14 @@
+@import "../../../../node_modules/syntax-highlight-element/dist/themes/prettylights.css";
+
+:host {
+  display: flex;
+  width: 80%;
+}
+
+.gg-code-snippet {
+  padding: 32px;
+  border-radius: 16px;
+  background-color: #151B23;
+  box-shadow: 0px 16px 32px -8px #151B23;
+  width: 100%;
+}
