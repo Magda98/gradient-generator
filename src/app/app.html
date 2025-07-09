@@ -1,10 +1,11 @@
 <div class="gg-app__container">
   <div class="gg-app__sidebar">
     <gg-text-input (valueChange)="text = $event"> </gg-text-input>
-    <gg-degree-picker></gg-degree-picker>
+    <gg-degree-picker [(value)]="angle"></gg-degree-picker>
+    <gg-color-list [(colors)]="colors"></gg-color-list>
   </div>
   <div class="gg-app__content">
-    <gg-showcase-card [text]="text"></gg-showcase-card>
+    <gg-showcase-card [text]="text" [angle]="angle" [colors]="colorsValues()"></gg-showcase-card>
     <gg-code-snippet></gg-code-snippet>
   </div>
 </div>

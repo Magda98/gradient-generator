@@ -21,10 +21,9 @@
     margin: 0;
     width: fit-content;
     height: fit-content;
-    background: linear-gradient(160deg, #9d39e5, #142243, #dc454b);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
     font-family: "Tilt Neon", sans-serif;
     font-weight: 800;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
   }
 }

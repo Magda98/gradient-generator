@@ -30,7 +30,6 @@
   height: var(--track-height);
   background: var(--track-color);
   border-radius: 5px;
-  outline: none;
   cursor: pointer;
   position: relative;
 }
@@ -55,7 +54,6 @@
   transform: scale(1.2);
 }
 
-/* Mozilla (Firefox) */
 .gg-degree-picker__slider::-moz-range-thumb {
   width: var(--thumb-size);
   height: var(--thumb-size);
