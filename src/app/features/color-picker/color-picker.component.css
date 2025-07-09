@@ -1,0 +1,40 @@
+:host {
+  display: block;
+}
+
+.gg-color-picker__trigger{
+  padding: 16px 32px;
+  border: none;
+  border-radius: 8px;
+  width: 240px;
+  font-family: "Tilt Neon", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  place-content: center;
+  cursor: pointer;
+  /* anchor-name: --tooltip; */
+}
+
+.tooltip{
+  background-color: #1F2C3D;
+  border-radius: 8px;
+  /* view-transition-name: --tooltip;
+  position-anchor:  --tooltip; */
+  position-area: top center;
+  position: absolute;
+  margin: 4px 0;
+  width: 240px;
+}
+
+
+.gg-color-picker__input{
+  background-color: #1F2C3D;
+  border: none;
+  color: #fff;
+  box-sizing: border-box;
+  font-family: "Tilt Neon", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  padding:  8px 12px;
+  width: 100%;
+}
