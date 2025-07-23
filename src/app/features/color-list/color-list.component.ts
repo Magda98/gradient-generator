@@ -1,15 +1,20 @@
 import { ChangeDetectionStrategy, Component, computed, model } from '@angular/core';
 import { ColorPickerComponent } from "../color-picker/color-picker.component";
+import { TrashIconComponent } from "../../shared/components/trash-icon.component";
 
 @Component({
   selector: 'gg-color-list',
-  imports: [ColorPickerComponent],
+  imports: [ColorPickerComponent, TrashIconComponent],
   template: `
-  <button (click)="addColor()">Add Color</button>
+  <div class="gg-color-list-header">
+    <button class="gg-button" (click)="addColor()">Add Color</button>
+  </div>
   @for(item of colorsEntries(); track item[0]) {
-    <div>
+    <div class="gg-color-item">
       <gg-color-picker [color]="item[1]" (colorChange)="colorChange(item[0], $event)"></gg-color-picker>
-      <button (click)="removeColor(item[0])">Remove Color</button>
+      <button class="gg-button gg-button--icon" (click)="removeColor(item[0])">
+      <gg-trash-icon></gg-trash-icon>
+      </button>
     </div>
   }
 
@@ -37,6 +42,6 @@ export class ColorListComponent {
   }
   addColor() {
     const newColorId = `color${Object.keys(this.colors()).length + 1}`;
-    this.colors.set({ ...this.colors(), [newColorId]: '#ffffff' });
+    this.colors.set({ ...this.colors(), [newColorId]: '#142243' });
   }
 }

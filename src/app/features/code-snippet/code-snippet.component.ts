@@ -1,13 +1,18 @@
 import {
-  AfterViewInit,
   ChangeDetectionStrategy,
-  ChangeDetectorRef,
   Component,
+  computed,
   CUSTOM_ELEMENTS_SCHEMA,
-  inject,
+  effect,
+  ElementRef,
   input,
+  viewChild,
 } from '@angular/core';
 import 'syntax-highlight-element';
+
+interface HtmlSyntaxHighlightElement extends HTMLElement {
+  update: () => void;
+}
 
 @Component({
   selector: 'gg-code-snippet',
@@ -17,17 +22,20 @@ import 'syntax-highlight-element';
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class CodeSnippetComponent implements AfterViewInit {
-  code = input<string>(
-    `background: linear-gradient(135deg, #42d392, #647eff);\n background-clip: text;\n -webkit-text-fill-color: transparent; `
+export class CodeSnippetComponent {
+  colors = input<Array<string>>([]);
+  angle = input<number>(0);
+  code = computed<string>(
+    () => `background: linear-gradient(${this.angle()}deg, ${this.colors().join(', ')});\n background-clip: text;\n -webkit-text-fill-color: transparent; `
   );
-  private cdRef = inject(ChangeDetectorRef);
+  protected syntaxHighlightElement = viewChild<ElementRef<HtmlSyntaxHighlightElement>>('syntaxHighlight');
 
-  ngAfterViewInit(): void {
-    /**
-     * after initialization, we need to manually detect changes
-     * to trigger syntax highlighting
-     */
-    this.cdRef.detectChanges();
+  constructor() {
+    effect(() => {
+      this.code();
+      setTimeout(() => {
+        this.syntaxHighlightElement()?.nativeElement.update?.();
+      });
+    });
   }
 }

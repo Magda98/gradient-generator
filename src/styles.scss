@@ -12,3 +12,24 @@ html {
     "XROT" 0,
     "YROT" 0;
 }
+
+
+.gg-button {
+  padding: 8px 32px;
+  border: none;
+  border-radius: 8px;
+  background-color: #4a90e2;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+
+  &--icon {
+    padding: 8px 16px;
+  }
+
+  &:hover {
+    background-color: #357ab8;
+  }
+}

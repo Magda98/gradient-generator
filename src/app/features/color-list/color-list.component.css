@@ -1,3 +1,15 @@
 :host {
   display: block;
 }
+
+
+.gg-color-item{
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+
+.gg-color-list-header{
+  margin-bottom: 16px;
+}

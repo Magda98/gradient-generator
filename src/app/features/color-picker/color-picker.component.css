@@ -24,6 +24,8 @@
   position: absolute;
   margin: 4px 0;
   width: 240px;
+  padding: 16px;
+  box-sizing: border-box;
 }
 
 
@@ -37,4 +39,24 @@
   font-size: 18px;
   padding:  8px 12px;
   width: 100%;
+  border: 2px solid #fff;
+  border-radius: 8px;
+}
+
+
+.gg-color-picker-button{
+  width: 24px;
+  height: 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+
+.gg-color-picker__examples{
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+  flex-wrap: wrap;
 }
