@@ -18,7 +18,7 @@ html {
   padding: 8px 32px;
   border: none;
   border-radius: 8px;
-  background-color: #4a90e2;
+  background-color: #3f51b5;
   font-weight: 600;
   color: white;
   cursor: pointer;
@@ -29,7 +29,11 @@ html {
     padding: 8px 16px;
   }
 
+  &--drag {
+    cursor: grab;
+  }
+
   &:hover {
-    background-color: #357ab8;
+    background-color: #303f9f;
   }
 }
