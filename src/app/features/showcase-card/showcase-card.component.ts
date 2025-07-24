@@ -20,7 +20,7 @@ export class ShowcaseCardComponent {
   angle = input<number>(135);
   background = computed(() => {
     return `background: linear-gradient(${this.angle()}deg, ${this.colors().join(
-      ', '
+      ', ',
     )});`;
   });
 }

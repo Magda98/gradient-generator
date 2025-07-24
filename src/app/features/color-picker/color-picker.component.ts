@@ -34,13 +34,13 @@ import { FormsModule } from '@angular/forms';
           [(ngModel)]="color"
         />
         <div class="gg-color-picker__examples">
-          @for(colorExample of colorExamples(); track colorExample) {
-          <button
-            class="gg-color-picker-button"
-            [style.background-color]="colorExample"
-            (click)="color.set(colorExample)"
-            [attr.aria-label]="'choose color ' + colorExample"
-          ></button>
+          @for (colorExample of colorExamples(); track colorExample) {
+            <button
+              class="gg-color-picker-button"
+              [style.background-color]="colorExample"
+              (click)="color.set(colorExample)"
+              [attr.aria-label]="'choose color ' + colorExample"
+            ></button>
           }
         </div>
       </div>

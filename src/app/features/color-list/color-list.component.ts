@@ -28,25 +28,25 @@ import { DragIconComponent } from '../../shared/components/drag-icon.component';
       <button class="gg-button" (click)="addColor()">Add Color</button>
     </div>
     <div cdkDropList (cdkDropListDropped)="drop($event)">
-      @for(item of colorsEntries(); track item[0]) {
-      <div cdkDrag class="gg-color-item">
-        <button
-          class="gg-button gg-button--icon gg-button--drag"
-          (click)="removeColor(item[0])"
-        >
-          <gg-drag-icon></gg-drag-icon>
-        </button>
-        <gg-color-picker
-          [color]="item[1]"
-          (colorChange)="colorChange(item[0], $event)"
-        ></gg-color-picker>
-        <button
-          class="gg-button gg-button--icon"
-          (click)="removeColor(item[0])"
-        >
-          <gg-trash-icon></gg-trash-icon>
-        </button>
-      </div>
+      @for (item of colorsEntries(); track item[0]) {
+        <div cdkDrag class="gg-color-item">
+          <button
+            class="gg-button gg-button--icon gg-button--drag"
+            (click)="removeColor(item[0])"
+          >
+            <gg-drag-icon></gg-drag-icon>
+          </button>
+          <gg-color-picker
+            [color]="item[1]"
+            (colorChange)="colorChange(item[0], $event)"
+          ></gg-color-picker>
+          <button
+            class="gg-button gg-button--icon"
+            (click)="removeColor(item[0])"
+          >
+            <gg-trash-icon></gg-trash-icon>
+          </button>
+        </div>
       }
     </div>
   `,

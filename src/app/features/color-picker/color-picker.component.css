@@ -2,7 +2,7 @@
   display: block;
 }
 
-.gg-color-picker__trigger{
+.gg-color-picker__trigger {
   padding: 16px 32px;
   border: none;
   border-radius: 8px;
@@ -15,8 +15,8 @@
   /* anchor-name: --tooltip; */
 }
 
-.tooltip{
-  background-color: #1F2C3D;
+.tooltip {
+  background-color: #1f2c3d;
   border-radius: 8px;
   /* view-transition-name: --tooltip;
   position-anchor:  --tooltip; */
@@ -28,23 +28,21 @@
   box-sizing: border-box;
 }
 
-
-.gg-color-picker__input{
-  background-color: #1F2C3D;
+.gg-color-picker__input {
+  background-color: #1f2c3d;
   border: none;
   color: #fff;
   box-sizing: border-box;
   font-family: "Tilt Neon", sans-serif;
   font-weight: 600;
   font-size: 18px;
-  padding:  8px 12px;
+  padding: 8px 12px;
   width: 100%;
   border: 2px solid #fff;
   border-radius: 8px;
 }
 
-
-.gg-color-picker-button{
+.gg-color-picker-button {
   width: 24px;
   height: 24px;
   border: none;
@@ -53,8 +51,7 @@
   background-color: #fff;
 }
 
-
-.gg-color-picker__examples{
+.gg-color-picker__examples {
   display: flex;
   gap: 8px;
   margin-top: 8px;

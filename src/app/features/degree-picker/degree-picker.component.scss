@@ -17,7 +17,7 @@
   font-weight: 600;
   color: #fff;
   text-align: center;
-  background-color: #1F2C3D;
+  background-color: #1f2c3d;
   padding: 4px 8px;
   border-radius: 4px;
   width: 60px;
@@ -72,5 +72,9 @@
 }
 
 .gg-degree-picker__slider {
-  background: linear-gradient(to right, var(--thumb-color) var(--value, 0%), var(--track-color) var(--value, 0%));
+  background: linear-gradient(
+    to right,
+    var(--thumb-color) var(--value, 0%),
+    var(--track-color) var(--value, 0%)
+  );
 }

@@ -28,8 +28,8 @@ export class CodeSnippetComponent {
   code = computed<string>(
     () =>
       `background: linear-gradient(${this.angle()}deg, ${this.colors().join(
-        ', '
-      )});\n background-clip: text;\n -webkit-text-fill-color: transparent; `
+        ', ',
+      )});\n background-clip: text;\n -webkit-text-fill-color: transparent; `,
   );
   protected syntaxHighlightElement =
     viewChild<ElementRef<HtmlSyntaxHighlightElement>>('syntaxHighlight');

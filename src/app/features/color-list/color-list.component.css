@@ -2,16 +2,14 @@
   display: block;
 }
 
-
-.gg-color-item{
+.gg-color-item {
   display: flex;
   gap: 16px;
   margin-bottom: 16px;
   width: fit-content;
 }
 
-
-.gg-color-list-header{
+.gg-color-list-header {
   margin-bottom: 16px;
 }
 
@@ -24,7 +22,7 @@
   opacity: 0.3;
 }
 
-.cdk-drop-list-dragging{
+.cdk-drop-list-dragging {
   cursor: grab;
 }
 
