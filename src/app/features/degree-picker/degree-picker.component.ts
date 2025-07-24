@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, input, model, output } from '@angular/core';
+import { Component, input, model, output } from '@angular/core';
 
 @Component({
   selector: 'gg-degree-picker',
@@ -10,13 +10,13 @@ import { ChangeDetectionStrategy, Component, input, model, output } from '@angul
         [min]="min()"
         [max]="max()"
         [value]="value()"
-        [style.--value]="(value() - min()) / (max() - min()) * 100 + '%'"
+        [style.--value]="((value() - min()) / (max() - min())) * 100 + '%'"
         (input)="onValueChange($event)"
-      >
+      />
       <div class="gg-degree-picker__value">{{ value() }}</div>
     </div>
   `,
-  styleUrls: ['./degree-picker.component.scss']
+  styleUrls: ['./degree-picker.component.scss'],
 })
 export class DegreePickerComponent {
   min = input(0);

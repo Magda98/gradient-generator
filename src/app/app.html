@@ -1,11 +1,19 @@
 <div class="gg-app__container">
   <div class="gg-app__sidebar">
+    <h1>Gradient Text Generator</h1>
     <gg-text-input (valueChange)="text = $event"> </gg-text-input>
     <gg-degree-picker [(value)]="angle"></gg-degree-picker>
     <gg-color-list [(colors)]="colors"></gg-color-list>
   </div>
   <div class="gg-app__content">
-    <gg-showcase-card [text]="text" [angle]="angle" [colors]="colorsValues()"></gg-showcase-card>
-    <gg-code-snippet [angle]="angle" [colors]="colorsValues()"></gg-code-snippet>
+    <gg-showcase-card
+      [text]="text"
+      [angle]="angle"
+      [colors]="colorsValues()"
+    ></gg-showcase-card>
+    <gg-code-snippet
+      [angle]="angle"
+      [colors]="colorsValues()"
+    ></gg-code-snippet>
   </div>
 </div>

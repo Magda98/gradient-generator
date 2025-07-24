@@ -20,15 +20,19 @@ interface HtmlSyntaxHighlightElement extends HTMLElement {
   styleUrls: ['./code-snippet.component.scss'],
   standalone: true,
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CodeSnippetComponent {
-  colors = input<Array<string>>([]);
+  colors = input<string[]>([]);
   angle = input<number>(0);
   code = computed<string>(
-    () => `background: linear-gradient(${this.angle()}deg, ${this.colors().join(', ')});\n background-clip: text;\n -webkit-text-fill-color: transparent; `
+    () =>
+      `background: linear-gradient(${this.angle()}deg, ${this.colors().join(
+        ', '
+      )});\n background-clip: text;\n -webkit-text-fill-color: transparent; `
   );
-  protected syntaxHighlightElement = viewChild<ElementRef<HtmlSyntaxHighlightElement>>('syntaxHighlight');
+  protected syntaxHighlightElement =
+    viewChild<ElementRef<HtmlSyntaxHighlightElement>>('syntaxHighlight');
 
   constructor() {
     effect(() => {
