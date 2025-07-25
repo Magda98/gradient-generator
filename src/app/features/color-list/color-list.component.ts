@@ -9,6 +9,7 @@ import { TrashIconComponent } from '../../shared/components/trash-icon.component
 import {
   CdkDrag,
   CdkDragDrop,
+  CdkDragHandle,
   CdkDropList,
   moveItemInArray,
 } from '@angular/cdk/drag-drop';
@@ -26,6 +27,7 @@ import { getExampleColor } from '../../shared/utils/example-colors';
     CdkDrag,
     DragIconComponent,
     PlusIconComponent,
+    CdkDragHandle,
   ],
   animations: [listAnimation],
   template: `
@@ -35,8 +37,9 @@ import { getExampleColor } from '../../shared/utils/example-colors';
       [@listAnimation]="this.colorsEntries().length"
     >
       @for (item of colorsEntries(); track item[0]) {
-        <div cdkDrag class="gg-color-item">
+        <div class="gg-color-item" cdkDrag>
           <button
+            cdkDragHandle
             class="gg-button gg-button--icon gg-button--drag"
             (click)="removeColor(item[0])"
           >
