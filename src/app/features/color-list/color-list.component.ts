@@ -14,6 +14,8 @@ import {
 } from '@angular/cdk/drag-drop';
 import { DragIconComponent } from '../../shared/components/drag-icon.component';
 import { PlusIconComponent } from '../../shared/components/plus-icon.component';
+import { listAnimation } from '../../shared/animations/list-item.animation';
+import { getExampleColor } from '../../shared/utils/example-colors';
 
 @Component({
   selector: 'gg-color-list',
@@ -25,8 +27,13 @@ import { PlusIconComponent } from '../../shared/components/plus-icon.component';
     DragIconComponent,
     PlusIconComponent,
   ],
+  animations: [listAnimation],
   template: `
-    <div cdkDropList (cdkDropListDropped)="drop($event)">
+    <div
+      cdkDropList
+      (cdkDropListDropped)="drop($event)"
+      [@listAnimation]="this.colorsEntries().length"
+    >
       @for (item of colorsEntries(); track item[0]) {
         <div cdkDrag class="gg-color-item">
           <button
@@ -81,7 +88,7 @@ export class ColorListComponent {
     this.colors.set(newColors);
   }
   addColor() {
-    const newColorId = `color${Object.keys(this.colors()).length + 1}`;
-    this.colors.set({ ...this.colors(), [newColorId]: '#142243' });
+    const newColorId = `color${crypto.randomUUID()}`;
+    this.colors.set({ ...this.colors(), [newColorId]: getExampleColor() });
   }
 }

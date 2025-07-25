@@ -6,6 +6,7 @@ import {
   signal,
 } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { exampleColors } from '../../shared/utils/example-colors';
 
 @Component({
   selector: 'gg-color-picker',
@@ -51,32 +52,7 @@ import { FormsModule } from '@angular/forms';
 })
 export class ColorPickerComponent {
   color = model('');
-  protected colorExamples = signal([
-    '#142243',
-    '#ff1493',
-    '#000000',
-    '#808080',
-    '#800000',
-    '#008000',
-    '#000080',
-    '#808000',
-    '#800080',
-    '#008080',
-    '#1e90ff',
-    '#ff4500',
-    '#da70d6',
-    '#32cd32',
-    '#ffa500',
-    '#00ced1',
-    '#ff6347',
-    '#4682b4',
-    '#d2691e',
-    '#9acd32',
-    '#f0e68c',
-    '#dda0dd',
-    '#add8e6',
-    '#f08080',
-  ]);
+  protected colorExamples = signal(exampleColors);
   protected anchorName = signal<string>(`tooltip-${crypto.randomUUID()}`);
 
   textColor = computed(() => {
