@@ -13,6 +13,7 @@ import {
   moveItemInArray,
 } from '@angular/cdk/drag-drop';
 import { DragIconComponent } from '../../shared/components/drag-icon.component';
+import { PlusIconComponent } from '../../shared/components/plus-icon.component';
 
 @Component({
   selector: 'gg-color-list',
@@ -22,11 +23,9 @@ import { DragIconComponent } from '../../shared/components/drag-icon.component';
     CdkDropList,
     CdkDrag,
     DragIconComponent,
+    PlusIconComponent,
   ],
   template: `
-    <div class="gg-color-list-header">
-      <button class="gg-button" (click)="addColor()">Add Color</button>
-    </div>
     <div cdkDropList (cdkDropListDropped)="drop($event)">
       @for (item of colorsEntries(); track item[0]) {
         <div cdkDrag class="gg-color-item">
@@ -49,6 +48,10 @@ import { DragIconComponent } from '../../shared/components/drag-icon.component';
         </div>
       }
     </div>
+    <button class="gg-button" (click)="addColor()">
+      <gg-plus-icon></gg-plus-icon>
+      Add Color
+    </button>
   `,
   styleUrl: './color-list.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,

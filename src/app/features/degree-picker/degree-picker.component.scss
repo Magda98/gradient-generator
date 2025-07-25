@@ -8,7 +8,6 @@
 .gg-degree-picker__container {
   display: flex;
   align-items: center;
-  padding: 16px 0;
   gap: 32px;
 }
 
@@ -72,9 +71,7 @@
 }
 
 .gg-degree-picker__slider {
-  background: linear-gradient(
-    to right,
-    var(--thumb-color) var(--value, 0%),
-    var(--track-color) var(--value, 0%)
-  );
+  background: linear-gradient(to right,
+      var(--thumb-color) var(--value, 0%),
+      var(--track-color) var(--value, 0%));
 }
