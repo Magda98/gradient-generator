@@ -26,7 +26,7 @@
 }
 
 .cdk-drop-list-dragging {
-  cursor: grab;
+  cursor: grabbing;
 }
 
 .cdk-drop-list-dragging .cdk-drag {
