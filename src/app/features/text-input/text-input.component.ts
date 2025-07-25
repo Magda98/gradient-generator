@@ -13,6 +13,7 @@ import { FormsModule } from '@angular/forms';
     class="gg-text-input"
     [(ngModel)]="value"
     (ngModelChange)="valueChange.emit(value)"
+    [attr.aria-label]="'text input'"
   ></textarea>`,
   styleUrl: './text-input.component.scss',
   imports: [CommonModule, FormsModule],
