@@ -41,7 +41,6 @@ import { getExampleColor } from '../../shared/utils/example-colors';
           <button
             cdkDragHandle
             class="gg-button gg-button--icon gg-button--drag"
-            (click)="removeColor(item[0])"
           >
             <gg-drag-icon></gg-drag-icon>
           </button>
@@ -51,6 +50,7 @@ import { getExampleColor } from '../../shared/utils/example-colors';
           ></gg-color-picker>
           <button
             class="gg-button gg-button--icon"
+            [attr.aria-disabled]="removingDisabled()"
             (click)="removeColor(item[0])"
           >
             <gg-trash-icon></gg-trash-icon>
@@ -73,6 +73,10 @@ export class ColorListComponent {
     return Object.entries(this.colors() ?? {});
   });
 
+  removingDisabled = computed(() => {
+    return this.colorsEntries().length < 2;
+  });
+
   colorChange(colorId: string, $event: string) {
     const newColors = { ...this.colors() };
     newColors[colorId] = $event;
@@ -86,6 +90,11 @@ export class ColorListComponent {
   }
 
   removeColor(colorId: string) {
+    console.log('Removing color:', colorId);
+    if (this.removingDisabled()) {
+      return;
+    }
+
     const newColors = { ...this.colors() };
     delete newColors[colorId];
     this.colors.set(newColors);

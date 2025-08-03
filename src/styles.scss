@@ -48,6 +48,11 @@ body {
   &:hover {
     background-color: #303f9f;
   }
+
+  &[aria-disabled="true"] {
+    background-color: #9e9e9e;
+    cursor: not-allowed;
+  }
 }
 
 *::-webkit-scrollbar-thumb {
