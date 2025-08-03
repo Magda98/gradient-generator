@@ -31,13 +31,16 @@ export class CodeSnippetComponent {
         ', ',
       )});\n background-clip: text;\n -webkit-text-fill-color: transparent; `,
   );
+
   protected syntaxHighlightElement =
     viewChild<ElementRef<HtmlSyntaxHighlightElement>>('syntaxHighlight');
 
   constructor() {
     effect(() => {
       this.code();
-      setTimeout(() => {
+      // Trigger update on the syntax highlight element,
+      // queueing to run after the current text render
+      queueMicrotask(() => {
         this.syntaxHighlightElement()?.nativeElement.update?.();
       });
     });
