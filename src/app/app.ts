@@ -22,8 +22,7 @@ import { ColorListComponent } from './features/color-list/color-list.component';
 export class App {
   colors = signal<Record<string, string>>({
     color1: '#9d39e5',
-    color2: '#142243',
-    color3: '#dc454b',
+    color2: '#dc454b',
   });
   text = '';
   angle = 135;
