@@ -23,6 +23,7 @@ export class App {
   colors = signal<Record<string, string>>({
     color1: '#9d39e5',
     color2: '#dc454b',
+    color3: '#ff1493',
   });
   text = '';
   angle = 135;

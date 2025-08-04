@@ -10,7 +10,7 @@
   width: 100%;
   font-family: "Tilt Neon", sans-serif;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 1.8rem;
   place-content: center;
   cursor: pointer;
   /* anchor-name: --tooltip; */
@@ -32,14 +32,14 @@
 .gg-color-picker__input {
   background-color: #1f2c3d;
   border: none;
-  color: #fff;
+  color: #FAFAFA;
   box-sizing: border-box;
   font-family: "Tilt Neon", sans-serif;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 1.8rem;
   padding: 8px 12px;
   width: 100%;
-  border: 2px solid #fff;
+  border: 2px solid #FAFAFA;
   border-radius: 8px;
 }
 
@@ -49,7 +49,7 @@
   border: none;
   cursor: pointer;
   border-radius: 8px;
-  background-color: #fff;
+  background-color: #FAFAFA;
 }
 
 .gg-color-picker__examples {

@@ -85,6 +85,6 @@ export class ColorPickerComponent {
     const contrastWithWhite = (1 + 0.05) / (backgroundLum + 0.05);
     const contrastWithBlack = (backgroundLum + 0.05) / (0 + 0.05);
 
-    return contrastWithWhite > contrastWithBlack ? '#fff' : '#000';
+    return contrastWithWhite > contrastWithBlack ? '#FAFAFA' : '#121212';
   });
 }

@@ -28,9 +28,9 @@ body {
   border-radius: 8px;
   background-color: #3f51b5;
   font-weight: 600;
-  color: white;
+  color: #FAFAFA;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 1.6rem;
   transition: background-color 0.3s ease;
   display: flex;
   align-items: center;
@@ -57,14 +57,14 @@ body {
 
 *::-webkit-scrollbar-thumb {
   background-clip: padding-box;
-  background-color: #eff2f5;
+  background-color: #FAFAFA;
   border: 4px solid transparent;
   border-radius: 9999px;
 }
 
 *::-webkit-scrollbar-thumb {
   background-clip: padding-box;
-  background-color: #eff2f5;
+  background-color: #FAFAFA;
   border: 4px solid transparent;
   border-radius: 9999px;
 }
