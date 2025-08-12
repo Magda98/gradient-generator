@@ -76,3 +76,8 @@ body {
 *::-webkit-scrollbar {
   width: 14px;
 }
+
+::selection {
+  color: #FAFAFA;
+  background-color: #dd0280;
+}
