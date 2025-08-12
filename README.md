@@ -1,8 +1,37 @@
-# GradientGenerator
+# Gradient Generator
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.1.
+A simple tool to generate CSS gradients.
 
-## Development server
+[🚀 Generate Text Gradients!](https://magda98.github.io/gradient-generator/)
+
+## Features
+
+- 🎨 Create linear gradients with multiple color stops.
+- 🖌️ Interactively change colors using a color picker.
+- ✨ Add or remove colors from the gradient.
+- 🔄 Adjust the gradient angle using a degree picker.
+- 🖐️ Drag and drop to reorder colors.
+- 📋 View and copy the generated CSS snippet.
+
+## How to Use
+
+1.  **Add Colors**: Click the '➕' icon to add a new color to the gradient.
+2.  **Change Colors**: Click on any color swatch to open the color picker and select a new color.
+3.  **Remove Colors**: Click the '🗑️' icon next to a color to remove it.
+4.  **Adjust Angle**: Use the degree picker to set the angle of the gradient.
+5.  **Copy CSS**: The CSS code for the gradient is automatically generated. Click the copy button in the code snippet section to copy it to your clipboard.
+
+## Screenshots
+
+![Gradient Generator App](./.github/images/gradient_generator.png)
+
+---
+
+## Development Information
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli).
+
+### Local Development
 
 To start a local development server, run:
 
@@ -10,50 +39,12 @@ To start a local development server, run:
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+### Build
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-```bash
-ng generate component component-name
-```
+### Running unit tests
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
