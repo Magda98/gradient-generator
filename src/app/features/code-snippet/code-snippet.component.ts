@@ -1,3 +1,4 @@
+import { isPlatformBrowser } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
@@ -5,14 +6,13 @@ import {
   CUSTOM_ELEMENTS_SCHEMA,
   effect,
   ElementRef,
+  inject,
   input,
+  OnInit,
+  PLATFORM_ID,
   viewChild,
 } from '@angular/core';
-import 'syntax-highlight-element';
-
-interface HtmlSyntaxHighlightElement extends HTMLElement {
-  update: () => void;
-}
+import { HtmlSyntaxHighlightElement } from 'syntax-highlight-element';
 
 @Component({
   selector: 'gg-code-snippet',
@@ -22,7 +22,7 @@ interface HtmlSyntaxHighlightElement extends HTMLElement {
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class CodeSnippetComponent {
+export class CodeSnippetComponent implements OnInit {
   colors = input<string[]>([]);
   angle = input<number>(0);
   code = computed<string>(
@@ -44,5 +44,16 @@ export class CodeSnippetComponent {
         this.syntaxHighlightElement()?.nativeElement.update?.();
       });
     });
+  }
+
+  protected isBrowser = false;
+
+  private readonly platformId = inject(PLATFORM_ID);
+
+  async ngOnInit(): Promise<void> {
+    if (isPlatformBrowser(this.platformId)) {
+      // load syntax-highlight-element dynamically only on browser because it is not SSR compatible
+      await import('syntax-highlight-element');
+    }
   }
 }

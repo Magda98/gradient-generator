@@ -41,6 +41,7 @@ import { getExampleColor } from '../../shared/utils/example-colors';
           <button
             cdkDragHandle
             class="gg-button gg-button--icon gg-button--drag"
+            [attr.aria-label]="'drag color ' + item[0]"
           >
             <gg-drag-icon></gg-drag-icon>
           </button>
@@ -50,6 +51,7 @@ import { getExampleColor } from '../../shared/utils/example-colors';
           ></gg-color-picker>
           <button
             class="gg-button gg-button--icon"
+            [attr.aria-label]="'remove color ' + item[0]"
             [attr.aria-disabled]="removingDisabled()"
             (click)="removeColor(item[0])"
           >

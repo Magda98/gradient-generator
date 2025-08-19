@@ -12,6 +12,7 @@ import { Component, input, model, output } from '@angular/core';
         [value]="value()"
         [style.--value]="((value() - min()) / (max() - min())) * 100 + '%'"
         (input)="onValueChange($event)"
+        [attr.aria-label]="'choose angle'"
       />
       <div class="gg-degree-picker__value">{{ value() }}</div>
     </div>

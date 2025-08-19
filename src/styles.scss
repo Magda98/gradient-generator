@@ -28,7 +28,7 @@ body {
   border-radius: 8px;
   background-color: #3f51b5;
   font-weight: 600;
-  color: #FAFAFA;
+  color: #fafafa;
   cursor: pointer;
   font-size: 1.6rem;
   transition: background-color 0.3s ease;
@@ -57,14 +57,14 @@ body {
 
 *::-webkit-scrollbar-thumb {
   background-clip: padding-box;
-  background-color: #FAFAFA;
+  background-color: #fafafa;
   border: 4px solid transparent;
   border-radius: 9999px;
 }
 
 *::-webkit-scrollbar-thumb {
   background-clip: padding-box;
-  background-color: #FAFAFA;
+  background-color: #fafafa;
   border: 4px solid transparent;
   border-radius: 9999px;
 }
@@ -78,6 +78,6 @@ body {
 }
 
 ::selection {
-  color: #FAFAFA;
+  color: #fafafa;
   background-color: #dd0280;
 }
