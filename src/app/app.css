@@ -7,14 +7,14 @@
   overflow: hidden;
 
   @media screen and (min-width: 1280px) {
-      grid-template-columns: 4fr 6fr;
+    grid-template-columns: 4fr 6fr;
   }
 }
 
 .gg-app__sidebar {
   background-color: #151b23;
   padding: 16px 24px;
-  color: #FAFAFA;
+  color: #fafafa;
   overflow-y: auto;
 }
 
@@ -25,17 +25,16 @@
   justify-content: center;
   gap: 24px;
   padding: 16px 32px;
-  background-color: #FAFAFA;
+  background-color: #fafafa;
   border-radius: 16px 16px 0 0;
 
   @media screen and (min-width: 1280px) {
-  border-radius: 16px 0 0 16px;
-  gap: 48px;
+    border-radius: 16px 0 0 16px;
+    gap: 48px;
   }
 }
 
-
-.gg-app__title{
+.gg-app__title {
   font-size: 4.8rem;
   margin-block: 12px;
   text-align: center;
@@ -50,8 +49,7 @@
   margin-top: 16px;
 }
 
-
-.gg-app__description-text{
+.gg-app__description-text {
   text-align: center;
   font-size: 1.8rem;
   margin: 8px;

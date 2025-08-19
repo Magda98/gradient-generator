@@ -2,7 +2,7 @@
 
 A simple tool to generate CSS gradients.
 
-[🚀 Generate Text Gradients!](https://magda98.github.io/gradient-generator/)
+[🚀 Generate Text Gradients!](https://imjustgradient.dev)
 
 ## Features
 
@@ -27,10 +27,6 @@ A simple tool to generate CSS gradients.
 
 ---
 
-## Development Information
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli).
-
 ### Local Development
 
 To start a local development server, run:
@@ -44,7 +40,3 @@ Navigate to `http://localhost:4200/`. The app will automatically reload if you c
 ### Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-### Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).

@@ -32,6 +32,7 @@ import { exampleColors } from '../../shared/utils/example-colors';
           [attr.aria-label]="'choose color'"
           class="gg-color-picker__input"
           type="text"
+          [attr.aria-label]="'choose color'"
           [(ngModel)]="color"
         />
         <div class="gg-color-picker__examples">
@@ -56,9 +57,7 @@ export class ColorPickerComponent {
   protected anchorName = signal<string>(`tooltip-${crypto.randomUUID()}`);
 
   textColor = computed(() => {
-    // remove hash
     let hexcolor = this.color().replace('#', '');
-    // handle hex shorthand (e.g., "03F"), expand it
     if (hexcolor.length === 3) {
       hexcolor = hexcolor
         .split('')
@@ -72,7 +71,6 @@ export class ColorPickerComponent {
     const g = parseInt(hexcolor.substring(2, 4), 16);
     const b = parseInt(hexcolor.substring(4, 6), 16);
 
-    // calculate luminance
     const getLum = (c: number) => {
       const sRGB = c / 255;
       return sRGB <= 0.03928
@@ -81,7 +79,7 @@ export class ColorPickerComponent {
     };
     const backgroundLum =
       0.2126 * getLum(r) + 0.7152 * getLum(g) + 0.0722 * getLum(b);
-    // calculate contrast ratio
+
     const contrastWithWhite = (1 + 0.05) / (backgroundLum + 0.05);
     const contrastWithBlack = (backgroundLum + 0.05) / (0 + 0.05);
 

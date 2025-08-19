@@ -5,7 +5,6 @@ import { TextInputComponent } from './features/text-input/text-input.component';
 import { FormsModule } from '@angular/forms';
 import { DegreePickerComponent } from './features/degree-picker/degree-picker.component';
 import { ColorListComponent } from './features/color-list/color-list.component';
-
 @Component({
   selector: 'gg-root',
   templateUrl: './app.html',
