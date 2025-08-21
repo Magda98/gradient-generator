@@ -12,8 +12,7 @@ import {
   PLATFORM_ID,
   viewChild,
 } from '@angular/core';
-import { HtmlSyntaxHighlightElement } from 'syntax-highlight-element';
-
+import SyntaxHighlightComponent from 'syntax-highlight-component';
 @Component({
   selector: 'gg-code-snippet',
   templateUrl: './code-snippet.component.html',
@@ -33,7 +32,7 @@ export class CodeSnippetComponent implements OnInit {
   );
 
   protected syntaxHighlightElement =
-    viewChild<ElementRef<HtmlSyntaxHighlightElement>>('syntaxHighlight');
+    viewChild<ElementRef<SyntaxHighlightComponent>>('syntaxHighlight');
 
   constructor() {
     effect(() => {
@@ -41,7 +40,7 @@ export class CodeSnippetComponent implements OnInit {
       // Trigger update on the syntax highlight element,
       // queueing to run after the current text render
       queueMicrotask(() => {
-        this.syntaxHighlightElement()?.nativeElement.update?.();
+        this.syntaxHighlightElement()?.nativeElement.paintTokenHighlights?.();
       });
     });
   }
@@ -53,7 +52,8 @@ export class CodeSnippetComponent implements OnInit {
   async ngOnInit(): Promise<void> {
     if (isPlatformBrowser(this.platformId)) {
       // load syntax-highlight-element dynamically only on browser because it is not SSR compatible
-      await import('syntax-highlight-element');
+      // await import('syntax-highlight-element');
+      await import('syntax-highlight-component');
     }
   }
 }
