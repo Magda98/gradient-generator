@@ -40,7 +40,7 @@ export class CodeSnippetComponent implements OnInit {
       // Trigger update on the syntax highlight element,
       // queueing to run after the current text render
       queueMicrotask(() => {
-        this.syntaxHighlightElement()?.nativeElement.paintTokenHighlights?.();
+        this.syntaxHighlightElement()?.nativeElement.updateTokenHighlights?.();
       });
     });
   }
