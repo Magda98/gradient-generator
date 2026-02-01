@@ -27,5 +27,5 @@
       "!{projectRoot}/eslint.config.cjs"
     ]
   },
-  "nxCloudId": "690b9a2272eb2d49558ed7b6"
+  "neverConnectToCloud": true
 }
